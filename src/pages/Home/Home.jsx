@@ -1,6 +1,8 @@
 import Header from "../../components/Header/Header";
 import LatestNews from "../../components/LatestNews/LatestNews";
+import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 import Navbar from "../../components/Navbar/Navbar";
+import RightNavBar from "../../components/RightNavBar/RightNavBar";
 
 const Home = () => {
     return (
@@ -10,13 +12,13 @@ const Home = () => {
             <Navbar/>
             <div className="grid md:grid-cols-4 gap-5">
                 <div className="border">
-                    <h2 className="font-poppins">left sidebar</h2>
+                    <LeftSideBar></LeftSideBar>
                 </div>
                 <div className="col-span-2 border">
                     middle
                 </div>
-                <div className="border">
-                    right sidebar
+                <div className="">
+                    <RightNavBar/>
                 </div>
             </div>
         </div>
