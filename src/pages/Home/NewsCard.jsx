@@ -10,8 +10,8 @@ import { AiFillEye } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
 const NewsCard = ({ aNews }) => {
-  console.log(aNews);
-  const { title, image_url, details, author ,total_view,rating} = aNews;
+  const { title, image_url, details, author ,total_view,rating,_id} = aNews;
+  console.log(typeof _id);
   return (
     <Card className="flex flex-col">
       <div className=" bg-[#F3F3F3] flex justify-between items-center mt-6 mb-4">
@@ -54,7 +54,7 @@ const NewsCard = ({ aNews }) => {
         {details.length > 200 ? (
           <Typography className="p-2">
             {details.slice(0, 200)}
-            <Link className="ml-1 text-[#FF8C47] font-bold">
+            <Link to={`/details/${_id}`} className="ml-1 text-[#FF8C47] font-bold">
               Read more ....
             </Link>
           </Typography>
